@@ -6,8 +6,6 @@ require("codecompanion").setup({
   },
 })
 
--- Load mcphub extension after codecompanion is initialized
--- and ensure the config structure exists
 local ok, cc_config = pcall(require, "codecompanion.config")
 if ok then
   cc_config.interactions = cc_config.interactions or {}
