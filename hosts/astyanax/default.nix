@@ -94,6 +94,7 @@ in
   };
 
   environment.systemPackages = [
+    pkgs.scantailor-universal
     (pkgs.writeShellApplication {
       name = "wol-andromache";
       runtimeInputs = [ pkgs.wakeonlan ];
