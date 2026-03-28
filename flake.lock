@@ -493,24 +493,6 @@
         "type": "github"
       }
     },
-    "nix-secrets": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1783872092,
-        "narHash": "sha256-Lg4kvJw3BxjeBEszQ9n1H+Oj/30u3N9N+TAwbmKhDPY=",
-        "ref": "main",
-        "rev": "1900322e9ddd920986c5b31ef161fd1c3f977846",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/hektor/nix-secrets"
-      },
-      "original": {
-        "ref": "main",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/hektor/nix-secrets"
-      }
-    },
     "nixCats": {
       "locked": {
         "lastModified": 1777273601,
@@ -766,7 +748,6 @@
         "git-hooks": "git-hooks",
         "hecuba-services": "hecuba-services",
         "home-manager": "home-manager",
-        "nix-secrets": "nix-secrets",
         "nixgl": "nixgl",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",

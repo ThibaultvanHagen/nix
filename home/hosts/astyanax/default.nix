@@ -25,7 +25,7 @@
     claude-code.enable = true;
     opencode.enable = true;
   };
-  anki.enable = true;
+  anki.enable = false;
   audio.enable = true;
   browser.enable = true;
   browser.primary = "librewolf";
@@ -43,7 +43,7 @@
   nfc.enable = true;
   nvim.enable = true;
   pandoc.enable = true;
-  secrets.enable = true;
+  secrets.enable = false;
   shell = {
     enable = true;
     bash.aliases.lang-js = true;
@@ -51,7 +51,7 @@
   };
   ssh.enable = true;
   deploy.enable = true;
-  taskwarrior.enable = true;
+  taskwarrior.enable = false;
   terminal.enable = true;
   reference-manager.enable = true;
 

@@ -14,10 +14,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-secrets = {
-      url = "git+ssh://git@github.com/hektor/nix-secrets?shallow=1&ref=main";
-      flake = false;
-    };
+    # nix-secrets = {
+    #   url = "git+ssh://git@github.com/hektor/nix-secrets?shallow=1&ref=main";
+    #   flake = false;
+    # };
     colmena = {
       url = "github:zhaofengli/colmena";
       inputs.nixpkgs.follows = "nixpkgs";

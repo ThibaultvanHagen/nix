@@ -46,7 +46,7 @@ in
     };
   };
   networking.enable = true;
-  secrets.enable = true;
+  secrets.enable = false;
   ssh.enable = true;
   storage.enable = true;
   syncthing = {
@@ -61,8 +61,8 @@ in
   };
   taskwarrior.enable = true;
 
-  secrets.nixSigningKey.enable = true;
-  restic-backup.enable = true;
+  secrets.nixSigningKey.enable = false;
+  restic-backup.enable = false;
   tailscale.enable = true;
   desktop.ly.enable = true;
   docker.enable = true;
