@@ -10,6 +10,7 @@ in
 {
   options.ai-tools.opencode = {
     enable = lib.mkEnableOption "opencode";
+    openrouter.enable = lib.mkEnableOption "openrouter provider for opencode";
   };
 
   config = lib.mkIf cfg.enable {
