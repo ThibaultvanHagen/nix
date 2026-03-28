@@ -32,7 +32,7 @@ in
   audio.enable = true;
   bluetooth.enable = true;
   bootloader.enable = true;
-  desktop.niri.enable = true;
+  desktop.gnome.enable = true;
   git.enable = true;
   keyboard.enable = true;
   localization.enable = true;
