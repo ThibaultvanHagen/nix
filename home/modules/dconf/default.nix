@@ -103,6 +103,7 @@ in
         custom-keybindings = [
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
         ];
       };
 
@@ -116,6 +117,12 @@ in
         binding = "<Super>Return";
         command = terminal;
         name = "Kitty";
+      };
+
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+        binding = "<Super><Shift>m";
+        command = "${terminal} --class=whisper-float -o remember_window_size=no -o initial_window_width=800 -o initial_window_height=300 whisper-realtime";
+        name = "Whisper Voice to Text";
       };
 
       "org/gnome/settings-daemon/plugins/power" = {

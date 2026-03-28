@@ -1,4 +1,11 @@
 input {
+      keyboard {
+        xkb {
+            layout "be"
+            variant "azerty"
+        }
+        numlock
+    }
     touchpad {
         tap
         natural-scroll
@@ -89,6 +96,7 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty"     { spawn "kitty"; }
     Mod+P hotkey-overlay-title="Run an Application: fuzzel"      { spawn "fuzzel"; }
+    Mod+Shift+M hotkey-overlay-title="Voice to Text: whisper"    { spawn "kitty" "--" "whisper-quick"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
