@@ -183,6 +183,10 @@
       formatter.${system} = gitHooks.formatter;
       devShells.${system} = gitHooks.devShells;
 
+      packages.${system} = import ./pkgs {
+        pkgs = import nixpkgs { inherit system; };
+      };
+
       legacyPackages.${system} = {
         sd-image-orange-pi-aarch64 =
           self.nixosConfigurations.sd-image-orange-pi-aarch64.config.system.build.sdImage;
