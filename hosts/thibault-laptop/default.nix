@@ -20,6 +20,7 @@ in
       inherit lib config;
       device = "/dev/nvme0n1";
     })
+    ./gnome-50-compat.nix
   ];
 
   inherit (meta) host;
@@ -31,7 +32,7 @@ in
   audio.enable = true;
   bluetooth.enable = true;
   bootloader.enable = true;
-  desktop.gnome.enable = true;
+  desktop.gnome.enable = false;
   git.enable = true;
   keyboard.enable = true;
   localization.enable = true;
@@ -54,7 +55,10 @@ in
     allowedTCPPorts = [ 22 ];
   };
 
-  nixpkgs.allowedUnfree = [ "bambu-studio" ];
+  nixpkgs.allowedUnfree = [
+    "bambu-studio"
+    "vscode"
+  ];
 
   hardware = {
     cpu.intel.updateMicrocode = true;
@@ -104,6 +108,7 @@ in
       enable = true;
       package = pkgs.plocate;
     };
+    power-profiles-daemon.enable = false;
     tlp = {
       enable = true;
       settings = {

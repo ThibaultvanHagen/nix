@@ -1,5 +1,5 @@
 { pkgs }:
 
 {
-  scantailor-universal = pkgs.scantailor-universal;
+  inherit (pkgs) scantailor-universal;
 }

@@ -52,7 +52,7 @@
     bash.addBinToPath = true;
   };
   ssh.enable = true;
-  deploy.enable = true;
+  deploy.enable = false;
   taskwarrior.enable = false;
   terminal.enable = true;
   reference-manager.enable = true;
