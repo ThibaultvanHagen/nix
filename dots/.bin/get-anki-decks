@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-curl 127.0.0.1:8765 -X POST -d '{"action": "deckNames", "version": 6}' | jq '.result[]' -r

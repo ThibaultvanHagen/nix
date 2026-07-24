@@ -21,7 +21,7 @@ with pkgs;
   pass
   ripgrep
   setxkbmap
-  silver-searcher
+  silver-searcher-ng
   sops
   sshfs
   # stremio

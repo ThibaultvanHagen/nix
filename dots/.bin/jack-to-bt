@@ -1,2 +1,0 @@
-pactl load-module module-jack-source connect=0
-pactl load-module module-loopback source=jack_in

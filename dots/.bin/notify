@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Pipe into notify-send
-#
-# e.g. `echo "Hello world" | notify`
-
-read -r msg
-notify-send "$msg" "$@"

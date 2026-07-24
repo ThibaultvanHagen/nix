@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# Open webcam window
-
-ffplay -f v4l2 -x 640 -y 480 -i /dev/video0 >/dev/null 2>&1 & disown

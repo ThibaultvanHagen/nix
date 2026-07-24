@@ -1,3 +1,0 @@
-#!/usr/env/bin bash
-
-ipython -i /home/h/.bin/calc.py

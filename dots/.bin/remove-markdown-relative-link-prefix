@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-sed -i -r 's/\[*\]\(\.\/([A-z-]*.md)/\]\(\1/g' *.md

@@ -1,6 +1,0 @@
-# shellcheck shell=bash
-# vim: set ft=bash :
-
-source "$HOME/.bash_aliases/dualboot"
-
-alias lm='xbacklight -set'

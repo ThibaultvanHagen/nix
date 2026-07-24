@@ -11,7 +11,7 @@ in
     inputs.disko.nixosModules.disko
     "${inputs.nixpkgs}/nixos/modules/profiles/qemu-guest.nix"
     ./disk.nix
-    ../../modules
+    "${inputs.hektor-nix}/modules"
   ];
 
   inherit (meta) host;
@@ -33,7 +33,7 @@ in
     users.enable = true;
   };
   networking.enable = true;
-  secrets.enable = true;
+  secrets.enable = false;
   ssh.enable = true;
   storage.enable = true;
   taskwarrior.enable = true;

@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-[ -f "/home/h/.local/share/pomo" ] && cat /home/h/.local/share/pomo || echo ""

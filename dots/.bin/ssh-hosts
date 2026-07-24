@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-ssh_hosts="$(grep -E 'Host [a-z0-9\-]*$' ~/.ssh/config | awk '{print $2}')"
-
-echo "$ssh_hosts"

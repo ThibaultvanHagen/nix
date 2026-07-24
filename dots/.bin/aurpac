@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Tiny AUR clone helper
-# aurpac <package-name>
-
-git clone "https://aur.archlinux.org/$1.git"

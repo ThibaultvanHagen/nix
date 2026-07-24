@@ -11,12 +11,6 @@
 nixos-rebuild switch --flake .#<hostname>
 ```
 
-### home manager
-
-```
-home-manager switch --flake .#work
-```
-
 ### virtual machines
 
 ```
@@ -24,7 +18,12 @@ nix build -L '.#nixosConfigurations.vm.config.system.build.vmWithDisko'
 ./result/bin/disko-vm
 ```
 
-## docs
+## upstream
 
-* [deploy using colmena](./deploy/README.md)
-* [SD installer images](./images/README.md)
+Shared modules and dotfiles come from
+[`hektor/nix`](https://github.com/hektor/nix) as a flake input. To pick up
+changes:
+
+```
+nix flake lock --update-input hektor-nix
+```

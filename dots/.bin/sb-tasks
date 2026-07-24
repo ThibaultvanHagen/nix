@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-num_done="$(task end.after:today status:completed count)"
-num_pending="$(($(task count status:pending) + $num_done))"
-num_waiting="$(($(task count status:waiting)))"
-
-echo -e "Tasks: $num_done/$num_pending+$num_waiting"

@@ -1,5 +1,0 @@
-context.home.read=project:home
-context.work.read=tags:work
-context.home.write=project:home
-context.studies.read=project:studies
-context.studies.write=project:studies

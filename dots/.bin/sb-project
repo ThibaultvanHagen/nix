@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Render contents of $HOME/.project if present
-[ -f "$HOME/.project" ] && cat "$HOME/.project" || echo ""
