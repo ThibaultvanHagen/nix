@@ -28,7 +28,6 @@ in
   home-manager.users.${config.host.username} = import ../../home/hosts/${config.host.name};
 
   "ai-tools".enable = true;
-  anki.enable = true;
   audio.enable = true;
   bluetooth.enable = true;
   bootloader.enable = true;
@@ -40,33 +39,15 @@ in
     fonts.enable = true;
     stylix.enable = true;
     users.enable = true;
-    yubikey = {
-      enable = true;
-      pam.enable = false;
-    };
   };
   networking.enable = true;
   secrets.enable = false;
   ssh.enable = true;
   storage.enable = true;
-  syncthing = {
-    enable = true;
-    folders.readings = {
-      path = "/home/${config.host.username}/doc/readings";
-      devices = [
-        "andromache"
-        "boox"
-      ];
-    };
-  };
-  taskwarrior.enable = true;
 
   secrets.nixSigningKey.enable = false;
-  restic-backup.enable = false;
   tailscale.enable = true;
-  desktop.ly.enable = true;
   docker.enable = true;
-  nfc.enable = true;
 
   firewall = {
     enable = true;
