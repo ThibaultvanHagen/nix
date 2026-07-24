@@ -8,21 +8,12 @@
 ### NixOS
 
 ```
-nixos-rebuild switch --flake .#<hostname>
-```
-
-### virtual machines
-
-```
-nix build -L '.#nixosConfigurations.vm.config.system.build.vmWithDisko'
-./result/bin/disko-vm
+nixos-rebuild switch --flake .#thibault-laptop
 ```
 
 ## upstream
 
-Shared modules and dotfiles come from
-[`hektor/nix`](https://github.com/hektor/nix) as a flake input. To pick up
-changes:
+shared modules and dotfiles come from [`hektor/nix`](https://github.com/hektor/nix) as a flake input. to update:
 
 ```
 nix flake lock --update-input hektor-nix
