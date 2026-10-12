@@ -30,7 +30,7 @@
   anki.enable = false;
   audio.enable = true;
   browser.enable = true;
-  browser.primary = "librewolf";
+  browser.primary = "firefox";
   cloud.hetzner.enable = true;
   comms.signal.enable = true;
   desktop.niri.enable = true;
