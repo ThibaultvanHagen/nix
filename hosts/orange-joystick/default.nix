@@ -1,7 +1,6 @@
 {
   config,
   inputs,
-  lib,
   pkgs,
   ...
 }:
@@ -59,29 +58,29 @@ in
 
   zramSwap.enable = true;
 
-  services.journald.storage = "volatile";
-
   networking = {
     hostName = "orange-joystick";
     useDHCP = true;
     firewall.allowedTCPPorts = [ 22 ];
   };
 
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = true;
+  services = {
+    journald.storage = "volatile";
+    openssh = {
+      enable = true;
+      settings.PasswordAuthentication = true;
+    };
+    joystickd = {
+      enable = true;
+      package = inputs.ender3-microscope.packages.aarch64-linux.joystickd;
+      configPath = ./joystick-config.json;
+    };
   };
 
   users.users.thibault = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     initialPassword = "exhibit";
-  };
-
-  services.joystickd = {
-    enable = true;
-    package = inputs.ender3-microscope.packages.aarch64-linux.joystickd;
-    configPath = ./joystick-config.json;
   };
 
   system.stateVersion = "25.05";
