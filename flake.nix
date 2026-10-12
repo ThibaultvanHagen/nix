@@ -13,6 +13,10 @@
       url = "github:hektor/nix?dir=dots/.config/nvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ender3-microscope = {
+      url = "git+ssh://git@github.com/ThibaultvanHagen/ender3-microscope";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
