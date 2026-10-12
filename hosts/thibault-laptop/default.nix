@@ -71,6 +71,13 @@ in
         intel-compute-runtime
       ];
     };
+    # ender3-microscope: stable names for two identical CH340 clones (no serial
+    # numbers), pinned to physical hub port paths on THIS machine.
+    # Regenerate KERNELS paths on other hosts: udevadm info -a -n /dev/ttyUSB0
+    udev.extraRules = ''
+      SUBSYSTEM=="tty", KERNELS=="1-1.1.1", SYMLINK+="micro-ender3"
+      SUBSYSTEM=="tty", KERNELS=="1-1.1.2", SYMLINK+="micro-uno"
+    '';
   };
 
   # https://wiki.nixos.org/wiki/Intel_Graphics
@@ -127,5 +134,10 @@ in
   };
 
   virtualisation.virtualbox.host.enable = true;
-  users.users.${config.host.username}.extraGroups = [ "vboxusers" ];
+  users.users.${config.host.username}.extraGroups = [
+    "vboxusers"
+    "camera"
+  ];
+
+  programs.gphoto2.enable = true;
 }
