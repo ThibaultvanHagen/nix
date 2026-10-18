@@ -8,11 +8,11 @@
   services = {
     displayManager.gdm.enable = true;
     xserver.enable = true;
+    desktopManager.gnome.enable = true;
     power-profiles-daemon.enable = false;
   };
 
   environment.systemPackages = with pkgs; [
-    gnome-core
     gnome-shell
     gnome-shell-extensions
   ];
