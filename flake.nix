@@ -10,11 +10,11 @@
     firefox-addons.follows = "hektor-nix/firefox-addons";
     git-hooks.follows = "hektor-nix/git-hooks";
     nvim = {
-      url = "github:hektor/nix?dir=dots/.config/nvim";
+      url = "github:hektor/nix?dir=home/modules/nvim/config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ender3-microscope = {
-      url = "git+ssh://git@github.com/ThibaultvanHagen/ender3-microscope";
+      url = "git+https://github.com/ThibaultvanHagen/ender3-microscope";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -33,7 +33,10 @@
       myUtils = import "${hektor-nix}/utils" { inherit lib; };
       hostDirNames = myUtils.dirNames ./hosts;
       system = "x86_64-linux";
-      dotsPath = "${hektor-nix}/dots";
+      paths = {
+        dots = "${hektor-nix}/dots";
+        hosts = ./hosts;
+      };
       gitHooks = import ./git-hooks.nix {
         inherit nixpkgs git-hooks system;
         src = ./.;
@@ -54,7 +57,7 @@
             inherit
               inputs
               outputs
-              dotsPath
+              paths
               myUtils
               ;
           };
