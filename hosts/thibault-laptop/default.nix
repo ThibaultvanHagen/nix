@@ -41,7 +41,13 @@ in
     stylix.enable = true;
     users.enable = true;
   };
-  networking.enable = true;
+  networking = {
+    enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 22 ];
+    };
+  };
   secrets.enable = false;
   ssh.enable = true;
   storage.enable = true;
@@ -49,11 +55,6 @@ in
   secrets.nixSigningKey.enable = false;
   tailscale.enable = true;
   docker.enable = true;
-
-  firewall = {
-    enable = true;
-    allowedTCPPorts = [ 22 ];
-  };
 
   nixpkgs.allowedUnfree = [
     "bambu-studio"
@@ -71,14 +72,15 @@ in
         intel-compute-runtime
       ];
     };
-    # ender3-microscope: stable names for two identical CH340 clones (no serial
-    # numbers), pinned to physical hub port paths on THIS machine.
-    # Regenerate KERNELS paths on other hosts: udevadm info -a -n /dev/ttyUSB0
-    udev.extraRules = ''
-      SUBSYSTEM=="tty", KERNELS=="1-1.1.1", SYMLINK+="micro-ender3"
-      SUBSYSTEM=="tty", KERNELS=="1-1.1.2", SYMLINK+="micro-uno"
-    '';
   };
+
+  # ender3-microscope: stable names for two identical CH340 clones (no serial
+  # numbers), pinned to physical hub port paths on THIS machine.
+  # Regenerate KERNELS paths on other hosts: udevadm info -a -n /dev/ttyUSB0
+  services.udev.extraRules = ''
+    SUBSYSTEM=="tty", KERNELS=="1-1.1.1", SYMLINK+="micro-ender3"
+    SUBSYSTEM=="tty", KERNELS=="1-1.1.2", SYMLINK+="micro-uno"
+  '';
 
   # https://wiki.nixos.org/wiki/Intel_Graphics
   environment.sessionVariables = {
