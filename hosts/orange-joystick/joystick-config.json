@@ -10,16 +10,16 @@
     "z_max": 4.93
   },
   "feeds": {
-    "xy_default": 200.0,
-    "z_default": 40.0,
-    "xy_max": 500.0,
-    "z_max": 100.0
+    "xy_default": 100.0,
+    "z_default": 20.0,
+    "xy_max": 250.0,
+    "z_max": 50.0
   },
   "joystick": {
     "uno_port": "/dev/micro-uno",
     "home_axes": "xyz",
-    "deadzone": 0.10,
-    "expo": 2.0,
+    "deadzone": 0.15,
+    "expo": 3.0,
     "invert_x": true,
     "invert_y": true,
     "invert_z": true,
