@@ -21,7 +21,7 @@
     "deadzone": 0.10,
     "expo": 2.0,
     "invert_x": true,
-    "invert_y": false,
+    "invert_y": true,
     "invert_z": true,
     "swap_xy": true,
     "center_x": 512.0,
