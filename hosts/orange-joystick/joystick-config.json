@@ -18,6 +18,10 @@
   "joystick": {
     "uno_port": "/dev/micro-uno",
     "home_axes": "xyz",
+    "speed_multiplier": 8.0,
+    "pot_mm_per_count": 0.01,
+    "pot_invert": false,
+    "pot_deadzone_counts": 2,
     "deadzone": 0.15,
     "expo": 3.0,
     "invert_x": true,
