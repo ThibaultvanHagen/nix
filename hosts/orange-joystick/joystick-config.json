@@ -10,10 +10,10 @@
     "z_max": 4.93
   },
   "feeds": {
-    "xy_default": 100.0,
-    "z_default": 20.0,
-    "xy_max": 250.0,
-    "z_max": 50.0
+    "xy_default": 60.0,
+    "z_default": 12.0,
+    "xy_max": 150.0,
+    "z_max": 30.0
   },
   "joystick": {
     "uno_port": "/dev/micro-uno",
