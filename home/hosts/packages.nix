@@ -25,6 +25,7 @@ with pkgs;
   sops
   sshfs
   # stremio
+  teams-for-linux
   tldr
   tree
   unzip
