@@ -104,6 +104,8 @@ in
     useNetworkd = true;
   };
 
+  systemd.network.wait-online.anyInterface = true;
+
   systemd.network.networks."40-wlan0" = {
     matchConfig.Name = "wlan0";
     networkConfig.DHCP = "yes";
