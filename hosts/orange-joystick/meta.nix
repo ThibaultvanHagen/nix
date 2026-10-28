@@ -1,6 +1,6 @@
 {
   system = "aarch64-linux";
-  role = "sbc";
+  role = "server";
   tags = [ "exhibition" ];
   host = {
     username = "thibault";

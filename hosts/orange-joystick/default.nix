@@ -65,7 +65,7 @@ in
   };
 
   services = {
-    journald.storage = "volatile";
+    journald.settings.Journal.Storage = "volatile";
     openssh = {
       enable = true;
       settings.PasswordAuthentication = true;
