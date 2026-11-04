@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  lib,
   pkgs,
   ...
 }:
@@ -12,6 +13,25 @@ in
   imports = [
     "${inputs.nixpkgs}/nixos/modules/installer/sd-card/sd-image.nix"
     inputs.ender3-microscope.nixosModules.joystickd
+    # minimal `host` option declarations — the laptop gets these from
+    # hektor-nix/modules, but this appliance host doesn't import that set,
+    # so without these the eval fails on `host.name`/`inherit (meta) host`
+    {
+      options.host = with lib; {
+        name = mkOption {
+          type = types.str;
+          default = "orange-joystick";
+        };
+        username = mkOption {
+          type = types.str;
+          default = "thibault";
+        };
+        admin = mkOption {
+          type = types.bool;
+          default = true;
+        };
+      };
+    }
   ];
 
   inherit (meta) host;
