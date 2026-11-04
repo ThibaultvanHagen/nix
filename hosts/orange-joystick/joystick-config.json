@@ -6,18 +6,16 @@
     "x_max": 215.0,
     "y_min": 5.0,
     "y_max": 215.0,
-    "z_min": -5.0,
     "z_max": 4.93
   },
   "feeds": {
-    "xy_default": 100.0,
+    "xy_default": 50.0,
     "z_default": 20.0,
-    "xy_max": 250.0,
+    "xy_max": 125.0,
     "z_max": 50.0
   },
   "joystick": {
     "uno_port": "/dev/micro-uno",
-    "home_axes": "xyz",
     "speed_multiplier": 8.0,
     "dial_mm_per_count": 0.05,
     "dial_invert": false,
