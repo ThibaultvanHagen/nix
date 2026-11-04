@@ -6,7 +6,7 @@
     "x_max": 215.0,
     "y_min": 5.0,
     "y_max": 215.0,
-    "z_max": 7.93
+    "z_max": 4.93
   },
   "feeds": {
     "xy_default": 50.0,
@@ -29,7 +29,7 @@
     "center_y": 512.0,
     "park_x": 53.05,
     "park_y": 64.1,
-    "park_z": 3.0,
+    "park_z": 0.0,
     "poll_hz": 20.0,
     "position_sync_s": 0.5,
     "long_press_s": 2.0,
