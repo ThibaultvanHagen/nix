@@ -1,5 +1,5 @@
 {
-  "port": "/dev/micro-ender3",
+  "port": "",
   "baud": 115200,
   "limits": {
     "x_min": 5.0,
@@ -15,7 +15,7 @@
     "z_max": 50.0
   },
   "joystick": {
-    "uno_port": "/dev/micro-uno",
+    "uno_port": "",
     "speed_multiplier": 8.0,
     "dial_mm_per_count": 0.05,
     "dial_invert": false,
