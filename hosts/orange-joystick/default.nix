@@ -94,6 +94,11 @@ in
       enable = true;
       package = inputs.ender3-microscope.packages.aarch64-linux.joystickd;
       configPath = ./joystick-config.json;
+      # real topology via the USB hub (1-1): printer on hub port 4,
+      # uno on hub port 2 — names are debug sugar; the daemon's config
+      # uses empty ports + auto-detect and does not depend on these
+      printerUsbPath = "1-1.4";
+      unoUsbPath = "1-1.2";
     };
   };
 
