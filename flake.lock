@@ -167,11 +167,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793807093,
-        "narHash": "sha256-rlTkRrZ7Hr7wdWAbt7j9o+KR657NSVN+osBKZjJ8NyM=",
+        "lastModified": 1793869397,
+        "narHash": "sha256-hsYkP/hUyCKRIC8zfSXzhopyh8sDiQnES1mqi4c3Y6w=",
         "ref": "refs/heads/main",
-        "rev": "56f1433b7d2f29d22ec564066977652e679fff6d",
-        "revCount": 28,
+        "rev": "e5b51a00d26412fef9f50ac19979863c3f44a1d0",
+        "revCount": 30,
         "type": "git",
         "url": "https://github.com/ThibaultvanHagen/ender3-microscope"
       },
